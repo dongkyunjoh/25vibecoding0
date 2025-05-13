@@ -69,3 +69,48 @@ if selected_mbti:
 # 👣 푸터
 st.markdown("---")
 st.markdown("<p style='text-align: center; font-size: 14px;'>Made with 💖 by 선생님과 AI</p>", unsafe_allow_html=True)
+
+import streamlit as st
+import random
+
+# 페이지 설정
+st.set_page_config(
+    page_title="MBTI 진로 추천",
+    page_icon="🎯",
+    layout="centered"
+)
+
+# 타이틀
+st.markdown("<h1 style='text-align: center; color: hotpink;'>🌟 MBTI 유형별 진로 추천 🎯</h1>", unsafe_allow_html=True)
+
+# MBTI별 데이터: 설명 + 직업 + 직업 소개
+mbti_jobs = {
+    "INTJ": {
+        "desc": "💡 전략적인 사색가! 창의적이고 논리적이야!",
+        "jobs": {
+            "🔬 데이터 과학자": "데이터를 분석해서 미래를 예측하는 똑똑한 직업이에요!",
+            "📊 전략 컨설턴트": "기업이 문제를 해결할 수 있도록 돕는 전략 전문가예요.",
+            "🧪 연구원": "새로운 것을 발견하고 실험하는 과학자예요!"
+        }
+    },
+    "INFP": {
+        "desc": "🎨 감성적인 중재자! 따뜻한 마음과 상상력이 풍부해!",
+        "jobs": {
+            "✍️ 작가": "이야기나 글을 써서 감동을 주는 사람입니다.",
+            "🎭 예술가": "그림, 연기, 음악 등으로 마음을 표현해요.",
+            "🫂 상담가": "사람의 고민을 들어주고 도와주는 멋진 사람이에요."
+        }
+    },
+    "ESTJ": {
+        "desc": "📋 믿음직한 관리자! 체계적이고 현실적이야!",
+        "jobs": {
+            "🏢 경영 관리자": "회사를 잘 운영하고 조직을 이끄는 리더예요.",
+            "📈 프로젝트 매니저": "팀이 함께 목표를 잘 이룰 수 있게 도와주는 사람!",
+            "💼 세무사": "돈과 세금을 정확히 계산해주는 전문가예요."
+        }
+    },
+    "ESFP": {
+        "desc": "🎉 사교적인 연예인! 에너지 넘치고 모두를 즐겁게 해!",
+        "jobs": {
+            "🎤 가수": "무대에서 노래로 감동을 전하는 아티스트예요!",
+
