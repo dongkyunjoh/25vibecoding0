@@ -94,7 +94,7 @@ if mbti:
 
     st.download_button(
         label="📥 MBTI 상담 정보 다운로드",
-        data=io.StringIO(output_text),
+        data=io.output_text,
         file_name=f"{mbti}_상담정보.txt",
         mime="text/plain"
     )
