@@ -59,7 +59,7 @@ exercise_recommendations = {
     }
 }
 
-st.title("✨ MBTI 기반 운동 추천 웹앱 ✨")
+st.title("✨ MBTI 기반 운동 추천 ✨")
 
 mbti = st.selectbox("🧬 당신의 MBTI를 선택하세요:", options=list(exercise_recommendations.keys()))
 
